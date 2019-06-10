@@ -2,7 +2,7 @@ package dao
 
 import (
 	"errors"
-	"github.com/Sfeir/golang-200/model"
+	"github.com/allienna/golang-200/model"
 )
 
 const (

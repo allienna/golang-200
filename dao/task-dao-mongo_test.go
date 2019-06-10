@@ -2,8 +2,8 @@ package dao_test
 
 import (
 	"fmt"
-	"github.com/Sfeir/golang-200/dao"
-	"github.com/Sfeir/golang-200/model"
+	"github.com/allienna/golang-200/dao"
+	"github.com/allienna/golang-200/model"
 	"github.com/satori/go.uuid"
 	"os"
 	"testing"

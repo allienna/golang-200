@@ -1,7 +1,7 @@
 package web
 
 import (
-	"github.com/Sfeir/golang-200/dao"
+	"github.com/allienna/golang-200/dao"
 	"github.com/meatballhat/negroni-logrus"
 	"github.com/rs/cors"
 	logger "github.com/sirupsen/logrus"

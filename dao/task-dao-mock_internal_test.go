@@ -1,7 +1,7 @@
 package dao
 
 import (
-	"github.com/Sfeir/golang-200/model"
+	"github.com/allienna/golang-200/model"
 	"github.com/satori/go.uuid"
 	"testing"
 	"time"

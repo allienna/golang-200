@@ -6,8 +6,8 @@ FROM golang:1.10-alpine AS build-env
 RUN apk --no-cache add -U make git
 
 # set the go path to import the source project
-WORKDIR $GOPATH/src/github.com/Sfeir/golang-200
-ADD . $GOPATH/src/github.com/Sfeir/golang-200
+WORKDIR $GOPATH/src/github.com/allienna/golang-200
+ADD . $GOPATH/src/github.com/allienna/golang-200
 
 # In one command-line (for reduce memory usage purposes),
 # we install the required software,

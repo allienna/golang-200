@@ -70,7 +70,7 @@ test: setupTest ## Start tests with a databases docker image
 	@export DB_HOST=$(DOCKER_IP); sleep 2; go test -v $(PKGS); make teardownTest
 
 bench: setupTest ## Start benchmark
-	@go test -v -run nothing -bench=. -memprofile=prof.mem github.com/Sfeir/golang-200/web ; make teardownTest
+	@go test -v -run nothing -bench=. -memprofile=prof.mem github.com/allienna/golang-200/web ; make teardownTest
 
 benchTool: bench ## Start benchmark tool
 	@echo "### TIP : type 'top 5' and 'list path_of_the_first_item'"

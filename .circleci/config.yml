@@ -1,0 +1,24 @@
+version: 2
+jobs:
+  build:
+    working_directory: /go/src/github.com/allienna/golang-200
+    docker:
+      - image: circleci/golang:1.12
+    steps:
+      - checkout
+      - run:
+          name: Install Docker Compose
+          command: |
+            curl -L https://github.com/docker/compose/releases/download/1.19.0/docker-compose-`uname -s`-`uname -m` > ~/docker-compose
+            chmod +x ~/docker-compose
+            sudo mv ~/docker-compose /usr/local/bin/docker-compose
+      - setup_remote_docker
+      - run:
+          name: Start databases for test
+          command: docker-compose -f docker/databases.yml up -d
+      - run:
+          name: Run test
+          command: export PKGS=`go list ./... | grep -v /vendor/`; go test -v $PKGS
+      - run:
+          name: Tear down databases after test
+          command: docker-compose -f docker/databases.yml down
